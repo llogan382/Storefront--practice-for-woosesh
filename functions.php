@@ -63,6 +63,15 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 	}
 }
 
+add_action( 'after_setup_theme', 'my_theme_woocommerce_supprt' ); {
+}
+
+/**
+ * Adds theme support for WooCommerce
+ */
+function my_theme_woocommerce_supprt() {
+	add_theme_support( 'woocommerce' );
+}
 /**
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
